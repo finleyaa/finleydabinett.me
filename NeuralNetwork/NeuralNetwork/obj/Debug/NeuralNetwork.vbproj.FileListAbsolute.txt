@@ -1,0 +1,12 @@
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\bin\Debug\NeuralNetwork.exe.config
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\bin\Debug\NeuralNetwork.exe
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\bin\Debug\NeuralNetwork.pdb
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\bin\Debug\NeuralNetwork.xml
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.vbprojResolveAssemblyReference.cache
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.Resources.resources
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.vbproj.GenerateResource.Cache
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.vbproj.CoreCompileInputs.cache
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.exe
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.xml
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.pdb
+D:\Visual Basic\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.Form1.resources
