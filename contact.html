@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<script language="javascript" type="text/javascript" src="finishButton.js"></script>
+	<script language="javascript" type="text/javascript" src="dropdown.js"></script>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>FinWeb - Contact</title>
+		<link rel="icon" href="assets/icon.png"/>
+		<link rel="stylesheet" href="styles/main.css"/>
+		<link rel="stylesheet" href="css/font-awesome.css"/>
+	</head>
+	
+	<body>
+		<div class="top">
+			<div class="nav-bar">
+				<a href="index.html" class="nav"><i class="fa fa-home"></i> HOME</a>
+				<a href="about.html" class="nav"><i class="fa fa-user-circle-o"></i> ABOUT</a>
+				<a href="contact.html" class="nav"><i class="fa fa-envelope"></i> CONTACT</a>
+				<a class="search" onclick="searchDropDown()"><i class="fa fa-search"></i></a>
+				<div class="search-dropdown white-bg" id="search-box">
+					<form class="black-text middle">
+						Search
+						<input class="search-input"></input>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+		
+			<div class="container white-bg">
+				<a id="fullname" style="position:absolute;top:-47.5px"></a>
+				<p class="middle" style="font-size:18px">
+					Full name
+					</br>
+					<input type="text" id="fullname-text" class="input-curved"></input>
+					</br>
+				</p>
+				<form style="font:16px raleway;line-height:200%;bottom:0%;" class="bottom-middle" action="#subject">
+					<button class="button-large-o">Next</br><i class="fa fa-sort-down" href="#subject"></i></button>
+				</form>
+				<form style="font:16px raleway;line-height:200%;left:25%" class="top-middle" onclick="addressDropDown()">
+					<button class="button-large-o">Address</br><i class="fa fa-map-marker"></i></button>
+				</form>
+				<div class="dropdown white-bg top-middle" id="address-box" style="left:25%;transform:translate(-50%, 32px);height:50px;">
+					<form class="black-text middle">
+						Address Line 1
+						</br>
+						Address Line 2
+						</br>
+						Post Code
+					</form>
+				</div>
+				<form style="font:16px raleway;line-height:200%;left:75%" class="top-middle" onclick="emailDropDown()">
+					<button class="button-large-o">Email</br><i class="fa fa-envelope"></i></button>
+				</form>
+				<div class="dropdown white-bg top-middle" id="email-box" style="left:75%;transform:translate(-50%, 32px);height:50px">
+					<form class="black-text middle">
+						johndoe@email.com
+					</form>
+				</div>
+			</div>
+			
+			<div class="container black-bg">
+				<a id="subject" style="position:absolute;top:-47.5px"></a>
+				<p class="middle white-text" style="font-size:18px">
+					Subject
+					</br>
+					<input type="text" id="subject-text" class="input-curved-o" style="width:20vw;"></input>
+					</br>
+				</p>
+				<form style="font:16px raleway;line-height:200%;top:0%;left:50%;position:absolute;transform:translate(-50%, 50%)" action="#fullname">
+					<button class="button-large"><i class="fa fa-sort-up"></i></br>Previous</button>
+				</form>
+				<form style="font:16px raleway;line-height:200%;bottom:0%;" class="bottom-middle" action="#message">
+					<button class="button-large">Next</br><i class="fa fa-sort-down"></i></button>
+				</form>
+			</div>
+			
+			<div class="container white-bg">
+				<a id="message" style="position:absolute;top:-47.5px"></a>
+				<p class="middle" style="font-size:18px">
+					Message
+					</br>
+					<textarea type="text" id="message-text" class="input-curved" style="width:70vw;height:60vh;margin:10px;"></textarea>
+					</br>
+				</p>
+				<form style="font:16px raleway;line-height:200%;top:0%;left:50%;position:absolute;transform:translate(-50%, 50%)" action="#subject">
+					<button class="button-large-o"><i class="fa fa-sort-up"></i></br>Previous</button>
+				</form>
+				<form style="font:16px raleway;line-height:200%;bottom:0%;" class="bottom-middle" action="#message">
+					<button class="button-large-o" id="finish" onmousedown="finishForm()">Finish</br><i class="fa fa-check-circle"></i></button>
+				</form>
+			</div>
+			
+		</div>
+	</body>
+</html>
