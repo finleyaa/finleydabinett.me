@@ -1,38 +1,35 @@
-var apiKey = "a5684ff069c74930beff5c4ccccbaa06"
-var url = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey="
-var images = []
-var loadedImages = []
+var recog = new p5.SpeechRec()
+var speech = new p5.Speech()
+var url = "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20171226T191934Z.9c6f27c98a3eb908.926a60f7b2ddd3737537ea4df958acd36dcabaf0&"
+var apiKey = "trnsl.1.1.20171226T191934Z.9c6f27c98a3eb908.926a60f7b2ddd3737537ea4df958acd36dcabaf0"
 
 function setup() {
-	loadJSON(url + apiKey, gotData)
-}
-
-function gotData(data){
-	console.log(data)
-	for (var i = 0; i < data.articles.length; i++){
-		console.log(data.articles[i].title)
-		images.push(data.articles[i].urlToImage)
-	}
-	for (var i = 0; i < images.length; i++){
-		loadImage(images[i])
-	}
-}
-
-function imageLoaded(image){
-	loadedImages.push(image)
+	createCanvas(windowWidth, windowHeight)
+	textAlign(CENTER)
+	textSize(32)
+	speech.setVolume(0.1)
+	speech.setLang("fr")
+	recog.onResult = showResult
+	recog.start()
 }
 
 function draw() {
-	if (loadedImages.length == images.length){
-		var x = 0
-		var y = 0
-		for (var i = 0; i < loadedImages.length; i++){
-			image(loadedImages[i], x, y)
-			x += loadedImages[i].width + 5
-			if (x > width){
-				x = 0
-				y += 200
-			}
-		}
-	}
+
+}
+
+function showResult(){
+	text(recog.resultString, width/2, height/2)
+	loadJSON(url + apiKey + "&text=" + recog.resultString + "&lang=fr-en", gotData)
+	//speech.speak(recog.resultString)
+}
+
+function gotData(data){
+	text(data.text, width/2, height/2 + 50)
+	speech.speak(data.text)
+}
+
+function keyPressed(){
+	background(255)
+	recog.onResult = showResult
+	recog.start()
 }
